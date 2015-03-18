@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "records/new", type: :view do
   before(:each) do
     assign(:record, Record.new(
-      :title => "",
+      :title => "MyString",
       :data_type => "MyString"
     ))
   end

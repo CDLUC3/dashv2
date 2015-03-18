@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "records/edit", type: :view do
   before(:each) do
     @record = assign(:record, Record.create!(
-      :title => "",
+      :title => "MyString",
       :data_type => "MyString"
     ))
   end
