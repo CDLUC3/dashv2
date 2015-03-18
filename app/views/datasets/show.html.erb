@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @dataset.title %>
+</p>
+
+<p>
+  <strong>Publication Year:</strong>
+  <%= @dataset.PublicationYear %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @dataset.language %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @dataset.size %>
+</p>
+
+<%= link_to 'Edit', edit_dataset_path(@dataset) %> |
+<%= link_to 'Back', datasets_path %>
