@@ -67,6 +67,8 @@ end
 # Do 'export DISABLE_SPRING=1' in your .bash_profile to keep it from running and messing you up
 # if you are switching back and forth for debugging often.
 
+gem "datacite-mapping", :path => '/dash2/apps/ui/datacite-mapping'
+
 if BundlerHelp.find_path('stash_engine') && ENV.to_hash['LOCAL_ENGINES'] == 'true'
   gem 'stash_engine', :path => BundlerHelp.find_path('stash_engine')
 else
