@@ -104,8 +104,8 @@ namespace :deploy do
   task :update_local_engines do
     on roles(:app) do
       my_branch = capture("cat #{deploy_to}/current/branch_info")
-      execute "cd #{deploy_to}/stash_datacite; git checkout #{my_branch}; git reset --hard origin/#{my_branch}; git pull"
-      execute "cd #{deploy_to}/stash_engine; git checkout #{my_branch}; git reset --hard origin/#{my_branch}; git pull"
+#      execute "cd #{deploy_to}/stash_datacite; git checkout #{my_branch}; git reset --hard origin/#{my_branch}; git pull"
+#      execute "cd #{deploy_to}/stash_engine; git checkout #{my_branch}; git reset --hard origin/#{my_branch}; git pull"
       #execute "cd #{deploy_to}/stash_datacite; git reset --hard origin/development; git pull"
       #execute "cd #{deploy_to}/stash_engine; git reset --hard origin/development; git pull"
     end
