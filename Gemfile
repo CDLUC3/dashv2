@@ -68,18 +68,20 @@ end
 # if you are switching back and forth for debugging often.
 
 gem "datacite-mapping", :path => '/dash2/apps/ui/datacite-mapping'
+gem "stash_engine", :path => '/dash2/apps/ui/stash_engine'
+gem "stash_datacite", :path => '/dash2/apps/ui/stash_datacite'
 
-if BundlerHelp.find_path('stash_engine') && ENV.to_hash['LOCAL_ENGINES'] == 'true'
-  gem 'stash_engine', :path => BundlerHelp.find_path('stash_engine')
-else
-  gem 'stash_engine', :git => 'https://github.com/CDLUC3/stash_engine.git', :branch => 'development'
-end
+# if BundlerHelp.find_path('stash_engine') && ENV.to_hash['LOCAL_ENGINES'] == 'true'
+#   gem 'stash_engine', :path => BundlerHelp.find_path('stash_engine')
+# else
+#   gem 'stash_engine', :git => 'https://github.com/CDLUC3/stash_engine.git', :branch => 'development'
+# end
 
-if BundlerHelp.find_path('stash_datacite') && ENV.to_hash['LOCAL_ENGINES'] == 'true'
-  gem 'stash_datacite', :path => BundlerHelp.find_path('stash_datacite')
-else
-  gem 'stash_datacite', :git => 'https://github.com/CDLUC3/stash_datacite.git', :branch => 'development'
-end
+# if BundlerHelp.find_path('stash_datacite') && ENV.to_hash['LOCAL_ENGINES'] == 'true'
+#   gem 'stash_datacite', :path => BundlerHelp.find_path('stash_datacite')
+# else
+#   gem 'stash_datacite', :git => 'https://github.com/CDLUC3/stash_datacite.git', :branch => 'development'
+# end
 
 #gem "omniauth-shibboleth", :git => "https://bitbucket.org/cdl/omniauth-shibboleth.git", :branch => 'master'
 
