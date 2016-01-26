@@ -21,6 +21,10 @@ config/database.yml
 .DS_Store
 public/assets
 
+# Ignroe local gems
+/vendor/
+
+
 # Ignore code coverage reports.
 /coverage/
 
