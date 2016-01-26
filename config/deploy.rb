@@ -1,6 +1,8 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
+require_relative '../bin/debug-require'
+
 set :application, 'dashv2'
 set :repo_url, 'https://github.com/CDLUC3/dashv2.git'
 
