@@ -3,7 +3,7 @@ PATH
   specs:
     stash-merritt (0.2.0)
       datacite-mapping (~> 0.2, >= 0.2.5)
-      merritt-manifest (~> 0.1, >= 0.1.1)
+      merritt-manifest (~> 0.1, >= 0.1.2)
       rubyzip (~> 1.1)
       stash-sword
       stash-wrapper
@@ -243,7 +243,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
-    merritt-manifest (0.1.1)
+    merritt-manifest (0.1.2)
       mime-types (~> 3.1)
       typesafe_enum (~> 0.1.7)
     mime-types (3.1)
