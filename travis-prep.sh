@@ -13,7 +13,7 @@ set -e
 # Local dependencies
 
 if [ ! -d ../stash ]; then
-  BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}
+  BRANCH=development #${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}
 
   echo "Cloning https://github.com/CDLUC3/stash:"
   cd ..
