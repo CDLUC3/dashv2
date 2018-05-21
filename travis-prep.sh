@@ -62,3 +62,9 @@ for CONFIG_FILENAME in ${CONFIG_FILES}; do
     { set +x; } 2>/dev/null
   fi
 done
+
+# ############################################################
+# Debugging
+
+echo travis-prep.sh: TMPDIR=${TMPDIR}
+
