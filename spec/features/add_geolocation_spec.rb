@@ -78,7 +78,7 @@ describe 'add geolocation' do
   end
 
   describe 'google_geocoding' do
-    it 'adds a place by name' do
+    xit 'adds a place by name' do
       item = find('div.leaflet-control-geosearch input.glass')
       item.set("Oakland, CA, USA\n")
       wait_for_ajax!
