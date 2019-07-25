@@ -52,6 +52,7 @@ PATH
       carrierwave (~> 0.10.0)
       ckeditor (~> 4.3.0)
       concurrent-ruby (~> 1.0)
+      fast_jsonapi (~> 1.5)
       filesize (~> 0.1.1)
       font-awesome-rails
       httpclient (~> 2.8.3)
@@ -312,6 +313,8 @@ GEM
       faraday
     faraday_middleware (0.12.2)
       faraday (>= 0.7.4, < 1.0)
+    fast_jsonapi (1.5)
+      activesupport (>= 4.2)
     ffi (1.11.1)
     filesize (0.1.1)
     font-awesome-rails (4.7.0.5)
