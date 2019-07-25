@@ -1,3 +1,5 @@
+require 'fileutils'
+
 # rubocop:disable Metrics/BlockLength
 namespace :dev_ops do
 
@@ -68,6 +70,26 @@ namespace :dev_ops do
         puts desc.resource.id if desc.resource
         puts item.text_as_html
         puts ''
+      end
+    end
+  end
+
+  desc 'manually clean up temp files for successfully submitted resources'
+  task cleanup_staged_files: :environment do
+    unless ENV['RAILS_ENV']
+      puts 'RAILS_ENV must be explicitly set before running this script'
+      next
+    end
+    puts "Are you sure you want clean up staging files for #{Rails.env} on this machine?  (Type 'yes' to proceed)"
+    response = STDIN.gets
+    next unless response.strip.casecmp('YES').zero? # they have to type yes
+    Dir.glob(Rails.root.join('uploads', '*')).each do |path|
+      fn = File.basename(path)
+      next unless File.directory?(path) && fn.match(/^\d+$/)
+      resources = StashEngine::Resource.where(id: fn)
+      if resources.count < 1 || resources.first.current_resource_state.resource_state == 'submitted'
+        puts "Cleaning up resource files #{fn}"
+        FileUtils.rm_r path
       end
     end
   end
